@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background-color: #edf2f7;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.c-player {
+  display: block;
+  background-color: #2d3748;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transform: perspective(1000px) rotateY(10deg);
+  transition: transform 0.3s ease; /* Agregamos una transición para suavizar el movimiento */
+}
+
+.c-player:hover {
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+.c-player > h4,
+.c-player > p {
+  color: #e2e8f0;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.c-player > p {
+  color: #a0aec0;
+}
+
+.c-player--details .details-img {
+  position: relative;
+  margin: 2rem auto;
+}
+
+.c-player--details .details-img img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  animation: rotate 10s linear infinite;
+  overflow: hidden;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.c-player--details .details-title,
+.c-player--details .details-artist {
+  color: #e2e8f0;
+  font-size: 1.75rem;
+  text-align: center;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.c-player--details .details-artist {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.c-player--controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.c-player--controls .play-btn {
+  display: flex;
+  margin: 0 1rem;
+  padding: 1rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background-color: #ff9900;
+  color: #e2e8f0;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.c-player--controls .skip-btn {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #718096;
+  font-size: 1rem;
+}
+
+.dark {
+  background-color: #1a202c;
+  color: #e2e8f0;
+}
+
+.dark body {
+  background-color: #1a202c;
+}
+
+.dark .c-player {
+  background-color: #4a5568;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.dark .c-player > h4,
+.dark .c-player > p {
+  color: #e2e8f0;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #718096;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #4a5568;
+}
