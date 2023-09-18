@@ -28,7 +28,7 @@ function App() {
     setCurrentSongIndex((currentSongIndex) => {
       return (currentSongIndex + 1) % songs.length;
     });
-  }, []);
+  });
 
   return (
     <div className={`App ${darkMode ? "dark" : ""}`}>
