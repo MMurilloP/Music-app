@@ -145,3 +145,31 @@ button {
 button:hover {
   color: #4a5568;
 }
+
+/* Estilos para dispositivos móviles */
+
+@media (max-width: 768px) {
+  .c-player {
+    width: 80%;
+  }
+
+  .c-player--details .details-title {
+    font-size: 1.5rem;
+  }
+
+  .c-player--details .details-artist {
+    font-size: 1rem;
+  }
+}
+
+/* Estilos para tablets */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .c-player--details .details-title {
+    font-size: 1.75rem;
+  }
+
+  .c-player--details .details-artist {
+    font-size: 1.25rem;
+  }
+}
